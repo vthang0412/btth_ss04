@@ -17,8 +17,8 @@ create table Borrow(
     book_id int,
     borrow_date date default(current_date()),
     return_date date,
-	foreign key (reader_id) references Readers(reader_id),
-    foreign key (book_id) references Books(book_id)
+	foreign key (reader_id) references Reader(reader_id),
+    foreign key (book_id) references Book(book_id)
 );
 
 alter table Reader add email varchar(100) unique;
